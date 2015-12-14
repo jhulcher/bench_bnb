@@ -1,3 +1,4 @@
+var ApiActions = require("../actions/api_actions.js");
 var BenchStore = require("../stores/bench.js");
 
 var ApiUtil = {
@@ -7,7 +8,8 @@ var ApiUtil = {
       method: "GET",
       dataType: "json",
       success: function (response) {
-        BenchStore._benches.push(response);
+        ApiActions.receiveAll(response);
+        BenchStore.all();
       }
     });
   }
