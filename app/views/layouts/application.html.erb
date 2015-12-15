@@ -3,11 +3,14 @@
 <head>
   <title>BenchProj</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-
   <%= csrf_meta_tags %>
 </head>
 <body>
 
+
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQIilPeSBTy0AgtkeNbRb1SZP_NOAgVx8"
+    charset="utf-8"></script>
 <%= yield %>
 <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 </body>

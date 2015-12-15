@@ -14,7 +14,7 @@ var Index = React.createClass({
     BenchStore.addListener(function () {
       this.setState({benches: BenchStore.all()});
     }.bind(this));
-    ApiUtil.fetchBenches();
+    // ApiUtil.fetchBenches();
   },
 
   render: function () {
@@ -35,6 +35,5 @@ var Index = React.createClass({
     );
   }
 });
-
 
 module.exports = Index;
